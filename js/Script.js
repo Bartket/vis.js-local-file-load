@@ -11,13 +11,27 @@ var data = {
   edges: _edges,
 };
 var options = {
-  autoResize: true,
-  clickToUse: false,
-  edges: {
-    smooth: false
-  },
-  physics: false
-};
+   nodes: {
+     shape: 'dot',
+     font: {
+       face: 'Tahoma'
+     }
+   },
+   edges: {
+     width: 0.15,
+     smooth: {
+       type: 'continuous'
+     }
+   },
+   interaction: {
+     tooltipDelay: 200,
+     hideEdgesOnDrag: false
+   },
+   physics: false,
+   edges: {
+     smooth: false
+   }
+ };
 var network = new vis.Network(container, data, options);
 
 // File Reader (parser)
